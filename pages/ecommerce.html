@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/ecommerce.css" />
+  </head>
+  <body class="shop-page">
+    <header class="shop-header">
+      <div class="container header-row">
+        <div class="brand-block">
+          <span class="brand-mark">S</span>
+          <div>
+            <p class="mini-title">StyleSphere</p>
+            <h1>Fresh Finds</h1>
+          </div>
+        </div>
+        <button class="cart-pill" aria-label="Cart items">
+          🛒 <span id="shop-cart-count">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="container shop-main">
+      <section class="hero-banner" aria-label="Promotion banner">
+        <div>
+          <p>Limited-time offer</p>
+          <h2>Get up to 30% Off New Arrivals</h2>
+        </div>
+        <button class="button primary">Shop Now</button>
+      </section>
+
+      <section class="product-controls" aria-label="Product filters">
+        <div class="category-filters" role="tablist" aria-label="Category filters">
+          <button class="filter-chip active" data-category="all">All</button>
+          <button class="filter-chip" data-category="women">Women</button>
+          <button class="filter-chip" data-category="men">Men</button>
+          <button class="filter-chip" data-category="accessories">Accessories</button>
+          <button class="filter-chip" data-category="sale">Sale</button>
+        </div>
+      </section>
+
+      <section class="product-section" aria-labelledby="products-title">
+        <div class="section-head">
+          <h2 id="products-title">Trending Products</h2>
+          <span>Free shipping over $75</span>
+        </div>
+
+        <div class="product-grid" id="product-grid">
+          <article class="product-card" data-category="women" data-name="Luna Knit Set" data-price="84" data-rating="4.8" data-description="A soft knit co-ord designed for comfort and everyday movement.">
+            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80" alt="Luna knit set" />
+            <div class="product-info">
+              <div class="line-row"><span>Women</span><span>⭐ 4.8</span></div>
+              <h3>Luna Knit Set</h3>
+              <div class="line-row"><strong>$84</strong><button class="small-btn" aria-label="Add Luna Knit Set to cart">Add</button></div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="men" data-name="Summit Jacket" data-price="120" data-rating="4.7" data-description="A lightweight urban jacket with a modern silhouette and tailored comfort.">
+            <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80" alt="Summit jacket" />
+            <div class="product-info">
+              <div class="line-row"><span>Men</span><span>⭐ 4.7</span></div>
+              <h3>Summit Jacket</h3>
+              <div class="line-row"><strong>$120</strong><button class="small-btn" aria-label="Add Summit Jacket to cart">Add</button></div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="accessories" data-name="Halo Sunglasses" data-price="46" data-rating="4.9" data-description="Statement shades with a polished finish and UV protection.">
+            <img src="https://images.unsplash.com/photo-1577803947579-9f5d1c5d5f70?auto=format&fit=crop&w=900&q=80" alt="Halo sunglasses" />
+            <div class="product-info">
+              <div class="line-row"><span>Accessories</span><span>⭐ 4.9</span></div>
+              <h3>Halo Sunglasses</h3>
+              <div class="line-row"><strong>$46</strong><button class="small-btn" aria-label="Add Halo Sunglasses to cart">Add</button></div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="sale" data-name="Northwind Tote" data-price="58" data-rating="4.6" data-description="A minimalist tote for everyday essentials with roomy storage.">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80" alt="Northwind tote bag" />
+            <div class="product-info">
+              <div class="line-row"><span>Sale</span><span>⭐ 4.6</span></div>
+              <h3>Northwind Tote</h3>
+              <div class="line-row"><strong>$58</strong><button class="small-btn" aria-label="Add Northwind Tote to cart">Add</button></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <aside class="checkout-panel">
+        <div class="checkout-header">
+          <h3>Checkout</h3>
+          <span>Step 1 of 4</span>
+        </div>
+
+        <div class="checkout-steps">
+          <button class="step-btn active" data-step="cart">Cart</button>
+          <button class="step-btn" data-step="shipping">Shipping</button>
+          <button class="step-btn" data-step="payment">Payment</button>
+          <button class="step-btn" data-step="result">Result</button>
+        </div>
+
+        <div class="checkout-content" id="checkout-content">
+          <div class="checkout-section active" data-panel="cart">
+            <ul id="cart-items" class="cart-items"></ul>
+          </div>
+          <div class="checkout-section" data-panel="shipping">
+            <label>
+              Full name
+              <input type="text" value="Bhavana Reddy" aria-label="Full name" />
+            </label>
+            <label>
+              Address
+              <input type="text" value="12 Orchard Row, Hyderabad" aria-label="Address" />
+            </label>
+          </div>
+          <div class="checkout-section" data-panel="payment">
+            <label>
+              Card number
+              <input type="text" value="**** **** **** 2458" aria-label="Card number" />
+            </label>
+            <div class="split-fields">
+              <label>
+                Expiry
+                <input type="text" value="09/28" aria-label="Expiry date" />
+              </label>
+              <label>
+                CVV
+                <input type="text" value="483" aria-label="CVV" />
+              </label>
+            </div>
+          </div>
+          <div class="checkout-section" data-panel="result">
+            <div class="success-box">
+              <span>✅</span>
+              <div>
+                <h4>Order confirmed</h4>
+                <p>Your items will be delivered soon.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="summary-box">
+          <div class="summary-row"><span>Subtotal</span><strong id="subtotal">$0</strong></div>
+          <div class="summary-row"><span>Delivery</span><strong id="delivery">$0</strong></div>
+          <div class="summary-row total"><span>Total</span><strong id="total-price">$0</strong></div>
+        </div>
+
+        <button class="button primary full-width" id="checkout-action">Continue</button>
+      </aside>
+    </main>
+
+    <div class="modal hidden" id="product-modal" aria-label="Product details modal" aria-hidden="true">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Close details">×</button>
+        <img id="modal-image" src="" alt="Product detail preview" />
+        <div class="modal-body">
+          <span class="category-tag" id="modal-category">Women</span>
+          <h3 id="modal-name">Product name</h3>
+          <p id="modal-description">Product description</p>
+          <div class="modal-row"><strong id="modal-price">$0</strong><span id="modal-rating">⭐ 4.8</span></div>
+          <button class="button primary full-width" id="modal-add">Add to cart</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/ecommerce.js"></script>
+  </body>
+</html>

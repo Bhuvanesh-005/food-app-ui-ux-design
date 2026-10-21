@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Shop UI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/coffee-shop.css" />
+  </head>
+  <body class="coffee-page">
+    <div class="coffee-shell">
+      <header class="coffee-header">
+        <div class="brand-row">
+          <span class="coffee-badge">☕</span>
+          <div>
+            <p>Morning Brew</p>
+            <h1>Good coffee, happy you.</h1>
+          </div>
+        </div>
+        <button class="icon-round" aria-label="Shopping bag">👜</button>
+      </header>
+
+      <section class="promo-card">
+        <div>
+          <p class="eyebrow subtle">Fresh pick</p>
+          <h2>Buy 2, get 1 free today.</h2>
+        </div>
+        <button class="pulse-btn">Order now</button>
+      </section>
+
+      <main class="coffee-main">
+        <section class="menu-panel">
+          <div class="section-head">
+            <h3>Popular menu</h3>
+            <a href="#">See all</a>
+          </div>
+
+          <article class="menu-item" data-name="Caramel Latte" data-price="6.5">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80" alt="Caramel latte" />
+            <div class="menu-copy">
+              <h4>Caramel Latte</h4>
+              <div class="meta-row">
+                <span>⭐ 4.9</span>
+                <strong>$6.50</strong>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item" data-name="Vanilla Cold Brew" data-price="5.8">
+            <img src="https://images.unsplash.com/photo-1497636577773-f1231844b336?auto=format&fit=crop&w=900&q=80" alt="Cold brew coffee" />
+            <div class="menu-copy">
+              <h4>Vanilla Cold Brew</h4>
+              <div class="meta-row">
+                <span>⭐ 4.7</span>
+                <strong>$5.80</strong>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <aside class="order-panel">
+          <div class="section-head order-head">
+            <h3>Customize</h3>
+            <span>Large</span>
+          </div>
+
+          <div class="custom-group">
+            <label>Size</label>
+            <div class="option-row" data-group="size">
+              <button class="choice active" data-value="Small">Small</button>
+              <button class="choice" data-value="Medium">Medium</button>
+              <button class="choice" data-value="Large">Large</button>
+            </div>
+          </div>
+
+          <div class="custom-group">
+            <label>Milk</label>
+            <div class="option-row" data-group="milk">
+              <button class="choice active" data-value="Oat">Oat</button>
+              <button class="choice" data-value="Almond">Almond</button>
+              <button class="choice" data-value="Skim">Skim</button>
+            </div>
+          </div>
+
+          <div class="custom-group quantity-row">
+            <label>Quantity</label>
+            <div class="quantity-box">
+              <button class="qty btn-decrease" aria-label="Decrease quantity">−</button>
+              <span id="coffee-qty">1</span>
+              <button class="qty btn-increase" aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+
+          <div class="total-box">
+            <div class="summary-row"><span>Subtotal</span><strong id="coffee-total">$6.50</strong></div>
+            <div class="summary-row"><span>Tax</span><strong>$0.65</strong></div>
+            <div class="summary-row total"><span>Total</span><strong id="coffee-grand-total">$7.15</strong></div>
+          </div>
+
+          <button class="order-btn" id="place-order">Place order</button>
+        </aside>
+      </main>
+
+      <section class="loyalty-panel">
+        <div class="loyalty-head">
+          <h3>Loyalty points</h3>
+          <span>780 / 1000</span>
+        </div>
+        <div class="progress-bar" aria-label="Loyalty progress">
+          <span class="progress-fill"></span>
+        </div>
+      </section>
+
+      <section class="info-grid">
+        <div class="location-card">
+          <h3>Location</h3>
+          <p>12 Oak Lane, Green Avenue<br />Open until 9:30 PM</p>
+        </div>
+        <div class="hours-card">
+          <h3>Opening hours</h3>
+          <p>Mon–Fri: 7:00 AM – 9:30 PM<br />Sat–Sun: 8:00 AM – 10:00 PM</p>
+        </div>
+      </section>
+    </div>
+
+    <script src="../js/coffee-shop.js"></script>
+  </body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/game-shop.css" />
+  </head>
+  <body class="game-page">
+    <header class="game-header">
+      <div class="container header-row">
+        <div class="brand-group">
+          <span class="brand-square">G</span>
+          <div>
+            <p>Arcade Vault</p>
+            <h1>Game Shop</h1>
+          </div>
+        </div>
+        <button class="cart-button" aria-label="Cart">
+          🛒 <span id="game-cart-count">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="container game-main">
+      <section class="toolbar" aria-label="Game catalog controls">
+        <label class="search-box" aria-label="Search games">
+          <span>🔎</span>
+          <input id="game-search" type="search" placeholder="Search games" />
+        </label>
+
+        <div class="toolbar-row">
+          <div class="genre-filters" aria-label="Genre filters">
+            <button class="genre-btn active" data-genre="all">All</button>
+            <button class="genre-btn" data-genre="action">Action</button>
+            <button class="genre-btn" data-genre="rpg">RPG</button>
+            <button class="genre-btn" data-genre="fps">FPS</button>
+          </div>
+
+          <label class="sort-box">
+            Sort by
+            <select id="game-sort">
+              <option value="popularity">Popularity</option>
+              <option value="price">Price</option>
+              <option value="rating">Rating</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
+      <section class="game-grid" id="game-grid">
+        <article class="game-card" data-genre="action" data-name="Shadow Rift" data-price="49" data-rating="4.8" data-popularity="95" data-description="Fight across corrupted cities in a neon-drenched action adventure full of intense combat and platforming bursts.">
+          <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=80" alt="Shadow Rift cover art" />
+          <div class="game-info">
+            <div class="info-row"><span>Action</span><span>⭐ 4.8</span></div>
+            <h3>Shadow Rift</h3>
+            <div class="info-row"><strong>$49</strong><button class="mini-btn" aria-label="Add Shadow Rift to cart">Add</button></div>
+          </div>
+        </article>
+
+        <article class="game-card" data-genre="rpg" data-name="Eldermark" data-price="59" data-rating="4.9" data-popularity="91" data-description="Embark on a story-rich fantasy journey with tactical combat, deep character progression, and exploration.">
+          <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80" alt="Eldermark cover art" />
+          <div class="game-info">
+            <div class="info-row"><span>RPG</span><span>⭐ 4.9</span></div>
+            <h3>Eldermark</h3>
+            <div class="info-row"><strong>$59</strong><button class="mini-btn" aria-label="Add Eldermark to cart">Add</button></div>
+          </div>
+        </article>
+
+        <article class="game-card" data-genre="fps" data-name="Neon Siege" data-price="39" data-rating="4.6" data-popularity="88" data-description="A sharp tactical shooter with precision gunplay, strategic objectives, and team-based challenges.">
+          <img src="https://images.unsplash.com/photo-1528819622761-6bcf9d7f15a0?auto=format&fit=crop&w=900&q=80" alt="Neon Siege cover art" />
+          <div class="game-info">
+            <div class="info-row"><span>FPS</span><span>⭐ 4.6</span></div>
+            <h3>Neon Siege</h3>
+            <div class="info-row"><strong>$39</strong><button class="mini-btn" aria-label="Add Neon Siege to cart">Add</button></div>
+          </div>
+        </article>
+
+        <article class="game-card" data-genre="action" data-name="Runeborn" data-price="44" data-rating="4.7" data-popularity="90" data-description="A fast-moving arena adventure where combo chains and movement tech create explosive combat.">
+          <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=900&q=80" alt="Runeborn cover art" />
+          <div class="game-info">
+            <div class="info-row"><span>Action</span><span>⭐ 4.7</span></div>
+            <h3>Runeborn</h3>
+            <div class="info-row"><strong>$44</strong><button class="mini-btn" aria-label="Add Runeborn to cart">Add</button></div>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <aside class="summary-panel">
+      <h2>Wishlist & Cart</h2>
+      <div class="summary-box">
+        <div class="summary-row"><span>Wishlist</span><strong id="wishlist-count">0</strong></div>
+        <div class="summary-row"><span>Cart total</span><strong id="cart-total">$0</strong></div>
+      </div>
+      <button class="checkout-button" id="checkout-button">Checkout</button>
+    </aside>
+
+    <div class="modal hidden" id="game-modal" aria-label="Game details modal" aria-hidden="true">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Close game detail">×</button>
+        <img id="modal-image" src="" alt="Game illustration" />
+        <div class="modal-body">
+          <div class="modal-head">
+            <span id="modal-genre" class="genre-tag">Action</span>
+            <button class="wishlist-btn" id="wishlist-btn">♡ Wishlist</button>
+          </div>
+          <h3 id="modal-name">Game name</h3>
+          <p id="modal-description">Game description</p>
+          <div class="review-row">
+            <span id="modal-rating">⭐ 4.8</span>
+            <strong id="modal-price">$49</strong>
+          </div>
+          <div class="system-block">
+            <h4>System requirements</h4>
+            <ul>
+              <li>OS: Windows 10</li>
+              <li>CPU: Intel i5</li>
+              <li>RAM: 16 GB</li>
+              <li>GPU: GTX 1660</li>
+            </ul>
+          </div>
+          <button class="button primary full-width" id="modal-add">Add to cart</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/game-shop.js"></script>
+  </body>
+</html>

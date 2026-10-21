@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>National Daily News</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/newspaper.css" />
+  </head>
+  <body class="newspaper-page">
+    <div class="page-shell">
+      <header class="news-header">
+        <div class="topline">
+          <span>Wednesday, 16 October 2026</span>
+          <button class="theme-toggle" aria-label="Toggle color mode">☾</button>
+        </div>
+        <div class="masthead">
+          <div>
+            <p class="small-kicker">Independent reporting</p>
+            <h1>National Daily News</h1>
+          </div>
+        </div>
+        <nav class="headline-nav" aria-label="News categories">
+          <a href="#">World</a>
+          <a href="#">Politics</a>
+          <a href="#">Business</a>
+          <a href="#">Science</a>
+          <a href="#">Culture</a>
+        </nav>
+      </header>
+
+      <div class="ticker" aria-label="Breaking news ticker">
+        <span>Breaking News:</span>
+        <marquee behavior="scroll" direction="left" scrollamount="5">New civic transport policies announced across major cities • City planners unveil sustainable urban rail plan • Community markets open early for seasonal festival • Weather advisory remains in effect overnight</marquee>
+      </div>
+
+      <main class="news-grid">
+        <section class="main-story story-card">
+          <div class="story-tag">Top story</div>
+          <h2>City transit expansion brings faster travel and new public space projects.</h2>
+          <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=1200&q=80" alt="City commuters in motion" />
+          <p>A new round of urban transportation upgrades is expected to improve mobility, reduce commute times, and create greener public corridors across the region.</p>
+        </section>
+
+        <aside class="sidebar">
+          <div class="weather-card side-card">
+            <h3>Weather</h3>
+            <div class="weather-row">
+              <span class="weather-icon">☀️</span>
+              <strong>28°C</strong>
+            </div>
+            <p>Sunny, light breeze, high UV alert.</p>
+          </div>
+
+          <div class="trending-card side-card">
+            <h3>Trending</h3>
+            <ul>
+              <li>Smart city mobility</li>
+              <li>Startup funding surge</li>
+              <li>Local arts festival</li>
+              <li>Winter climate outlook</li>
+            </ul>
+          </div>
+        </aside>
+
+        <section class="sub-headlines story-card">
+          <article>
+            <h3>Regional leaders approve faster rail link between business and university districts.</h3>
+          </article>
+          <article>
+            <h3>Research teams report encouraging progress in low-carbon transport materials.</h3>
+          </article>
+          <article>
+            <h3>Residents gather for community-led park restoration project and volunteer day.</h3>
+          </article>
+        </section>
+
+        <section class="quick-news story-card">
+          <h3>Quick reads</h3>
+          <ul>
+            <li>New health initiative focuses on local nutrition and digital screening.</li>
+            <li>Technology firms expand hiring across design and AI research positions.</li>
+            <li>Tourism demand climbs ahead of annual cultural events and festivals.</li>
+          </ul>
+        </section>
+      </main>
+
+      <footer class="news-footer">
+        <p>National Daily News</p>
+        <p>Independent reporting for a connected world.</p>
+      </footer>
+    </div>
+
+    <script src="../js/newspaper.js"></script>
+  </body>
+</html>

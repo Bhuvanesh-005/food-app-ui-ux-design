@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram Clone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/instagram.css" />
+  </head>
+  <body class="instagram-page">
+    <div class="phone-shell">
+      <header class="insta-header">
+        <div class="header-brand">
+          <span>Instagram</span>
+        </div>
+        <div class="header-actions">
+          <button aria-label="Notifications">❤</button>
+          <button aria-label="Message">✉️</button>
+        </div>
+      </header>
+
+      <div class="story-row" aria-label="Stories">
+        <div class="story-item">
+          <span class="story-ring">A</span>
+          <small>You</small>
+        </div>
+        <div class="story-item">
+          <span class="story-ring">J</span>
+          <small>Jia</small>
+        </div>
+        <div class="story-item">
+          <span class="story-ring">M</span>
+          <small>Mia</small>
+        </div>
+        <div class="story-item">
+          <span class="story-ring">R</span>
+          <small>Rae</small>
+        </div>
+      </div>
+
+      <main class="screen active" data-screen="home">
+        <section class="feed">
+          <article class="post">
+            <div class="post-head">
+              <div class="user-pill">
+                <span class="avatar">A</span>
+                <strong>ananya.design</strong>
+              </div>
+              <button aria-label="More options">⋯</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80" alt="A creative workspace with a laptop and stationery" />
+            <div class="post-actions">
+              <button class="like-btn" aria-label="Like post">♡</button>
+              <button aria-label="Comment">💬</button>
+              <button aria-label="Share">✈️</button>
+              <button class="save-btn" aria-label="Save post">🔖</button>
+            </div>
+            <div class="post-body">
+              <strong>326 likes</strong>
+              <p><span>ananya.design</span> Designing a calmer mobile experience for everyday users.</p>
+            </div>
+          </article>
+
+          <article class="post">
+            <div class="post-head">
+              <div class="user-pill">
+                <span class="avatar">S</span>
+                <strong>studio.luma</strong>
+              </div>
+              <button aria-label="More options">⋯</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80" alt="Design team collaborating around a table" />
+            <div class="post-actions">
+              <button class="like-btn" aria-label="Like post">♡</button>
+              <button aria-label="Comment">💬</button>
+              <button aria-label="Share">✈️</button>
+              <button class="save-btn" aria-label="Save post">🔖</button>
+            </div>
+            <div class="post-body">
+              <strong>482 likes</strong>
+              <p><span>studio.luma</span> Team brainstorming with user flow sketches and moodboards.</p>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <main class="screen" data-screen="explore">
+        <div class="explore-grid">
+          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80" alt="Modern workspace" />
+          <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80" alt="Bright office chairs and desk" />
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Laptop and design mockups" />
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80" alt="Café seating area" />
+          <img src="https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?auto=format&fit=crop&w=900&q=80" alt="Design workspace in progress" />
+          <img src="https://images.unsplash.com/photo-1497366412874-3415097a27e7?auto=format&fit=crop&w=900&q=80" alt="People collaborating during work" />
+        </div>
+      </main>
+
+      <main class="screen" data-screen="reels">
+        <div class="reel-card">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" alt="Reel mockup" />
+          <div class="reel-overlay">
+            <span>🎵 City rhythm</span>
+            <div class="reel-actions">
+              <button aria-label="Like reel">♡</button>
+              <button aria-label="Comment reel">💬</button>
+              <button aria-label="Share reel">✈️</button>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <main class="screen" data-screen="profile">
+        <section class="profile-header">
+          <div class="profile-avatar">B</div>
+          <div class="profile-stats">
+            <div><strong>248</strong><span>Posts</span></div>
+            <div><strong>14.8k</strong><span>Followers</span></div>
+            <div><strong>268</strong><span>Following</span></div>
+          </div>
+        </section>
+
+        <div class="bio-block">
+          <h3>BHUMANA BHUVANESH</h3>
+          <p>UI/UX designer • product thinking • prototyping</p>
+        </div>
+
+        <div class="profile-grid">
+          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80" alt="Profile post 1" />
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" alt="Profile post 2" />
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Profile post 3" />
+          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80" alt="Profile post 4" />
+          <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80" alt="Profile post 5" />
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80" alt="Profile post 6" />
+        </div>
+      </main>
+
+      <nav class="insta-nav" aria-label="Instagram bottom navigation">
+        <button class="nav-tab active" data-screen="home" aria-label="Home">🏠</button>
+        <button class="nav-tab" data-screen="explore" aria-label="Explore">🔍</button>
+        <button class="nav-tab" data-screen="reels" aria-label="Reels">▶️</button>
+        <button class="nav-tab" data-screen="profile" aria-label="Profile">👤</button>
+      </nav>
+    </div>
+
+    <script src="../js/instagram.js"></script>
+  </body>
+</html>

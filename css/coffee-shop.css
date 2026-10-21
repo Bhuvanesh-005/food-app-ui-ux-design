@@ -1,0 +1,315 @@
+:root {
+  --coffee-bg: #f8efe8;
+  --coffee-panel: #fffdfb;
+  --coffee-text: #2f2019;
+  --coffee-muted: #6c5246;
+  --coffee-accent: #8a4d2c;
+  --coffee-accent-soft: rgba(138, 77, 44, 0.12);
+  --coffee-border: rgba(120, 73, 45, 0.12);
+  --coffee-shadow: 0 20px 40px rgba(86, 51, 34, 0.12);
+}
+
+.coffee-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f7efe8 0%, #f4e6dc 100%);
+  font-family: 'Inter', sans-serif;
+  color: var(--coffee-text);
+  padding: 1.2rem;
+}
+
+.coffee-shell {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.5);
+  border: 1px solid var(--coffee-border);
+  border-radius: 30px;
+  box-shadow: var(--coffee-shadow);
+  padding: 1rem;
+}
+
+.coffee-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand-row {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.coffee-badge {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #b77a45 0%, #7d432a 100%);
+  color: white;
+  font-size: 1.4rem;
+}
+
+.brand-row p {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--coffee-muted);
+}
+
+.brand-row h1 {
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+}
+
+.icon-round {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  border: none;
+  background: rgba(138, 77, 44, 0.09);
+  cursor: pointer;
+}
+
+.promo-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background: linear-gradient(135deg, #e6d1c0 0%, #f3e6d8 100%);
+  border: 1px solid var(--coffee-border);
+  border-radius: 24px;
+  padding: 1.1rem 1.2rem;
+  margin-top: 1.1rem;
+}
+
+.promo-card h2 {
+  font-size: clamp(1.3rem, 2vw, 2rem);
+}
+
+.eyebrow.subtle {
+  color: var(--coffee-accent);
+}
+
+.pulse-btn,
+.order-btn {
+  background: linear-gradient(135deg, var(--coffee-accent) 0%, #b76a43 100%);
+  border: none;
+  border-radius: 14px;
+  color: white;
+  padding: 0.8rem 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.coffee-main {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.menu-panel,
+.order-panel,
+.loyalty-panel,
+.location-card,
+.hours-card {
+  background: rgba(255,255,255,0.8);
+  border: 1px solid var(--coffee-border);
+  border-radius: 24px;
+  padding: 1rem;
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.section-head h3 {
+  font-size: 1.2rem;
+}
+
+.section-head a {
+  color: var(--coffee-accent);
+  font-weight: 600;
+}
+
+.menu-item {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 0.8rem;
+  background: rgba(138, 77, 44, 0.04);
+  border-radius: 18px;
+  padding: 0.65rem;
+  margin-bottom: 0.8rem;
+}
+
+.menu-item img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.menu-copy h4 {
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+}
+
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--coffee-muted);
+  font-weight: 600;
+}
+
+.order-panel {
+  padding: 1.1rem;
+}
+
+.order-head {
+  margin-bottom: 1rem;
+}
+
+.order-head span {
+  color: var(--coffee-accent);
+  font-weight: 700;
+}
+
+.custom-group {
+  margin-bottom: 1rem;
+}
+
+.custom-group label {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-weight: 600;
+}
+
+.option-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.choice {
+  border: 1px solid var(--coffee-border);
+  background: rgba(138, 77, 44, 0.03);
+  border-radius: 12px;
+  padding: 0.55rem 0.7rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--coffee-text);
+}
+
+.choice.active {
+  background: var(--coffee-accent-soft);
+  border-color: rgba(138, 77, 44, 0.18);
+  color: var(--coffee-accent);
+}
+
+.quantity-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.quantity-box {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: rgba(138, 77, 44, 0.04);
+  border-radius: 12px;
+  padding: 0.35rem 0.5rem;
+}
+
+.qty {
+  border: none;
+  background: transparent;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: var(--coffee-accent);
+}
+
+.total-box {
+  margin-top: 1.2rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--coffee-border);
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+  color: var(--coffee-muted);
+}
+
+.summary-row.total {
+  color: var(--coffee-text);
+  font-weight: 800;
+  font-size: 1.04rem;
+}
+
+.order-btn {
+  width: 100%;
+  margin-top: 0.8rem;
+}
+
+.loyalty-panel {
+  margin-top: 1.2rem;
+}
+
+.loyalty-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.7rem;
+}
+
+.progress-bar {
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(138, 77, 44, 0.08);
+  overflow: hidden;
+}
+
+.progress-fill {
+  display: block;
+  width: 78%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #d59a72 0%, #a55f3a 100%);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.location-card,
+.hours-card {
+  min-height: 160px;
+}
+
+.location-card h3,
+.hours-card h3 {
+  margin-bottom: 0.7rem;
+}
+
+@media (max-width: 760px) {
+  .coffee-main,
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .promo-card,
+  .coffee-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

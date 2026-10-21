@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food App UI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/food-app.css" />
+  </head>
+  <body class="food-app-page">
+    <div class="food-shell">
+      <header class="food-header">
+        <div class="topbar">
+          <button class="icon-btn" aria-label="Open menu">☰</button>
+          <div>
+            <p class="eyebrow tiny">Good morning</p>
+            <h1>Find your meal</h1>
+          </div>
+          <button class="icon-btn cart-btn" aria-label="Cart">
+            🛒 <span id="mini-cart-count">0</span>
+          </button>
+        </div>
+
+        <label class="search-box" aria-label="Search meals">
+          <span>🔍</span>
+          <input id="food-search" type="search" placeholder="Search dishes" />
+        </label>
+
+        <nav class="food-category" aria-label="Food categories">
+          <button class="category-btn active" data-filter="all">All</button>
+          <button class="category-btn" data-filter="breakfast">Breakfast</button>
+          <button class="category-btn" data-filter="lunch">Lunch</button>
+          <button class="category-btn" data-filter="treats">Treats</button>
+          <button class="category-btn" data-filter="dessert">Dessert</button>
+        </nav>
+      </header>
+
+      <main class="food-main">
+        <section class="menu-section" aria-label="Food menu">
+          <div class="section-head">
+            <h2>Popular Dishes</h2>
+            <a href="#">View all</a>
+          </div>
+
+          <div class="food-grid" id="food-grid">
+            <article class="food-card" data-name="Avocado Toast" data-category="breakfast" data-price="14" data-time="10 min" data-rating="4.8">
+              <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=800&q=80" alt="Avocado toast with tomato and herbs" />
+              <div class="card-body">
+                <div class="card-topline">
+                  <span class="badge">Breakfast</span>
+                  <span class="rating">⭐ 4.8</span>
+                </div>
+                <h3>Avocado Toast</h3>
+                <div class="card-meta">
+                  <span>$14</span>
+                  <span>10 min</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="food-card" data-name="Chicken Rice Bowl" data-category="lunch" data-price="18" data-time="15 min" data-rating="4.7">
+              <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80" alt="Chicken rice bowl with vegetables" />
+              <div class="card-body">
+                <div class="card-topline">
+                  <span class="badge">Lunch</span>
+                  <span class="rating">⭐ 4.7</span>
+                </div>
+                <h3>Chicken Rice Bowl</h3>
+                <div class="card-meta">
+                  <span>$18</span>
+                  <span>15 min</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="food-card" data-name="Berry Smoothie" data-category="treats" data-price="9" data-time="8 min" data-rating="4.9">
+              <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=800&q=80" alt="Berry smoothie in a glass" />
+              <div class="card-body">
+                <div class="card-topline">
+                  <span class="badge">Treats</span>
+                  <span class="rating">⭐ 4.9</span>
+                </div>
+                <h3>Berry Smoothie</h3>
+                <div class="card-meta">
+                  <span>$9</span>
+                  <span>8 min</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="food-card" data-name="Chocolate Lava Cake" data-category="dessert" data-price="11" data-time="12 min" data-rating="4.8">
+              <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=800&q=80" alt="Chocolate lava cake on a plate" />
+              <div class="card-body">
+                <div class="card-topline">
+                  <span class="badge">Dessert</span>
+                  <span class="rating">⭐ 4.8</span>
+                </div>
+                <h3>Chocolate Lava Cake</h3>
+                <div class="card-meta">
+                  <span>$11</span>
+                  <span>12 min</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="food-card" data-name="Veggie Wrap" data-category="lunch" data-price="13" data-time="11 min" data-rating="4.6">
+              <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=800&q=80" alt="Fresh veggie wrap and salad" />
+              <div class="card-body">
+                <div class="card-topline">
+                  <span class="badge">Lunch</span>
+                  <span class="rating">⭐ 4.6</span>
+                </div>
+                <h3>Veggie Wrap</h3>
+                <div class="card-meta">
+                  <span>$13</span>
+                  <span>11 min</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="food-card" data-name="Pancake Stack" data-category="breakfast" data-price="16" data-time="14 min" data-rating="4.9">
+              <img src="https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&w=800&q=80" alt="Stack of pancakes with berries" />
+              <div class="card-body">
+                <div class="card-topline">
+                  <span class="badge">Breakfast</span>
+                  <span class="rating">⭐ 4.9</span>
+                </div>
+                <h3>Pancake Stack</h3>
+                <div class="card-meta">
+                  <span>$16</span>
+                  <span>14 min</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <aside class="food-detail" aria-label="Selected item details">
+          <div class="detail-image-wrap">
+            <img id="detail-image" src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=800&q=80" alt="Selected avocado toast" />
+          </div>
+          <div class="detail-body">
+            <div class="detail-header">
+              <span id="detail-category" class="badge accent">Breakfast</span>
+              <span id="detail-rating" class="rating">⭐ 4.8</span>
+            </div>
+            <h2 id="detail-name">Avocado Toast</h2>
+            <p id="detail-description">Sourdough toast with smashed avocado, cherry tomatoes, chili flakes, and lemon zest for a fresh, balanced bite.</p>
+            <div class="detail-meta">
+              <span id="detail-time">10 min</span>
+              <span id="detail-price">$14</span>
+            </div>
+            <div class="detail-actions">
+              <button type="button" class="qty-btn" aria-label="Decrease quantity">−</button>
+              <span id="quantity-display">1</span>
+              <button type="button" class="qty-btn" aria-label="Increase quantity">+</button>
+              <button type="button" id="add-to-cart" class="primary-action">Add to cart</button>
+            </div>
+          </div>
+        </aside>
+      </main>
+
+      <nav class="bottom-nav" aria-label="Main navigation">
+        <button class="nav-item active" aria-label="Home">🏠</button>
+        <button class="nav-item" aria-label="Orders">🧾</button>
+        <button class="nav-item" aria-label="Saved">❤</button>
+        <button class="nav-item" aria-label="Profile">👤</button>
+      </nav>
+    </div>
+
+    <script src="../js/food-app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Newsletter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/newsletter.css" />
+  </head>
+  <body class="newsletter-page">
+    <div class="preview-switcher" aria-label="Preview mode selector">
+      <button class="preview-btn active" data-view="desktop">Desktop</button>
+      <button class="preview-btn" data-view="mobile">Mobile</button>
+    </div>
+
+    <div class="newsletter-shell desktop-view" id="newsletter-shell">
+      <header class="newsletter-header">
+        <div class="brand-row">
+          <span class="logo-mark">N</span>
+          <span class="brand-name">Northstar</span>
+        </div>
+        <nav class="header-links" aria-label="Newsletter links">
+          <a href="#">Products</a>
+          <a href="#">Resources</a>
+          <a href="#">Pricing</a>
+        </nav>
+      </header>
+
+      <main class="newsletter-main">
+        <section class="hero-banner">
+          <div class="hero-copy">
+            <p class="eyebrow subtle">Weekly digest</p>
+            <h1>Build smarter experiences for your users.</h1>
+            <p>Your insights, simplified into a weekly snapshot of product updates, ideas, and inspiration.</p>
+            <button class="cta-btn">Go to your account!</button>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="device-card">
+              <span>Live report</span>
+              <strong>+24.8%</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="feature-block" aria-label="Newsletter features">
+          <div class="section-title">
+            <p class="eyebrow subtle">Why teams love it</p>
+            <h2>Everything in one place</h2>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <span class="feature-icon">📈</span>
+              <h3>Insights</h3>
+              <p>Track customer patterns and identify your biggest growth opportunities.</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-icon">⚡</span>
+              <h3>Speed</h3>
+              <p>Launch experiments faster with better collaboration and shared priorities.</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-icon">🧠</span>
+              <h3>Clarity</h3>
+              <p>Turn complex product data into useful next actions for your team.</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-icon">🤝</span>
+              <h3>Alignment</h3>
+              <p>Keep stakeholders informed with updates that everyone can understand.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="newsletter-footer">
+        <div class="social-links" aria-label="Social media links">
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Instagram">◎</a>
+        </div>
+        <p>© 2026 Northstar. All rights reserved.</p>
+        <a href="#" class="unsubscribe">Unsubscribe</a>
+      </footer>
+    </div>
+
+    <script src="../js/newsletter.js"></script>
+  </body>
+</html>
